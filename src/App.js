@@ -4,6 +4,7 @@ import TransactionsList from "./components/transactions-list/transactions-list";
 import AddTransactionButton from "./components/add-transaction-button/add-transaction-button";
 import TopTransaction from "./components/top-transaction/top-transaction";
 import styled from "styled-components";
+import Predictor from "./components/predictor/predictor";
 
 const AppContainer = styled.div`
   width: 100%;
@@ -23,6 +24,7 @@ const App = () => {
     <AppContainer>
       <TransactionsList />
       <SideBar>
+        <Predictor />
         <AddTransactionButton />
         <TopTransaction />
       </SideBar>

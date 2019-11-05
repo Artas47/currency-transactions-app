@@ -15,9 +15,11 @@ export const Input = styled.input`
 
 export const ErrorText = styled.div`
   color: red;
+  font-size: 2rem;
 `;
 
 export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
+  padding: 3rem 0;
 `;

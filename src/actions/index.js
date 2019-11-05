@@ -11,3 +11,22 @@ export const removeTransaction = id => {
     payload: id
   };
 };
+
+export const incrementPlnRate = () => {
+  return {
+    type: "INCREMENT_PLN"
+  };
+};
+
+export const decrementPlnRate = () => {
+  return {
+    type: "DECREMENT_PLN"
+  };
+};
+
+export const plnRateChange = value => {
+  return {
+    type: "PLN_RATE_CHANGE",
+    payload: value
+  };
+};

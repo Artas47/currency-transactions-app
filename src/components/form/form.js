@@ -16,7 +16,6 @@ const renderInput = formProps => {
   );
 };
 const renderError = props => {
-  console.log("fasfa", props);
   if (props.touched && props.error) {
     return (
       <div>
@@ -37,10 +36,9 @@ const Form = props => {
       <Field
         name="amount"
         component={renderInput}
-        label="Enter transaction amount"
+        label="Enter transaction amount (EUR)"
       />
       <S.ButtonsContainer>
-        {console.log(props)}
         <CustomButton primary type="submit">
           Add
         </CustomButton>

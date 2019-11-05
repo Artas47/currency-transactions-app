@@ -23,3 +23,9 @@ export const List = styled.div`
   align-items: center;
   overflow-y: scroll;
 `;
+
+export const TransactionsCount = styled.div`
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+`;

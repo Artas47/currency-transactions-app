@@ -9,21 +9,26 @@ const TransactionsList = props => {
     <S.TransactionsList>
       <S.TransactionsListHeader>TRANSACTIONS LIST</S.TransactionsListHeader>
       <S.List>
-        {_.map(props.transactions, transaction => {
+        {props.transactions.map(transaction => {
           return (
             <Transaction
+              key={transaction.id}
               transactionTitle={transaction.transaction}
               amount={transaction.amount}
+              id={transaction.id}
             />
           );
         })}
       </S.List>
+      <S.TransactionsCount>
+        Transactions count: {props.transactions.length}
+      </S.TransactionsCount>
     </S.TransactionsList>
   );
 };
 
 const mapStateToProps = state => {
-  return { transactions: state.transactions };
+  return { transactions: Object.values(state.transactions) };
 };
 
 export default connect(mapStateToProps)(TransactionsList);

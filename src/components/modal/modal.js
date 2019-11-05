@@ -6,7 +6,7 @@ import * as S from "./modal.styles";
 const Modal = props => {
   const renderModalContent = () => {
     return (
-      <S.Modal onClick={e => e.stopPropagation()}>
+      <S.Modal>
         <S.ModalHeader>{props.header}</S.ModalHeader>
         <S.ModalContent>{props.modalContent}</S.ModalContent>
       </S.Modal>
@@ -14,9 +14,7 @@ const Modal = props => {
   };
 
   return ReactDOM.createPortal(
-    <S.ModalContainer onClick={() => props.history.push("/")}>
-      {renderModalContent()}
-    </S.ModalContainer>,
+    <S.ModalContainer>{renderModalContent()}</S.ModalContainer>,
     document.querySelector("#modal")
   );
 };
