@@ -1,7 +1,33 @@
 import React from "react";
+import "./App.css";
+import TransactionsList from "./components/transactions-list/transactions-list";
+import AddTransactionButton from "./components/add-transaction-button/add-transaction-button";
+import TopTransaction from "./components/top-transaction/top-transaction";
+import styled from "styled-components";
+
+const AppContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+`;
+
+const SideBar = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`;
 
 const App = () => {
-  return <div>hello world</div>;
+  return (
+    <AppContainer>
+      <TransactionsList />
+      <SideBar>
+        <AddTransactionButton />
+        <TopTransaction />
+      </SideBar>
+    </AppContainer>
+  );
 };
 
 export default App;
