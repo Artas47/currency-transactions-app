@@ -3,8 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import App from "./App";
-import Modal from "./components/modal/modal";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import AddTransaction from "./components/add-transaction/add-transaction";
 
 import reducers from "./reducers/index";

@@ -2,14 +2,14 @@ import React from "react";
 import * as S from "./transactions-list.styles";
 import Transaction from "../transaction/transaction";
 import { connect } from "react-redux";
-import _ from "lodash";
+import PropTypes from "prop-types";
 
-const TransactionsList = props => {
+const TransactionsList = ({ transactions }) => {
   return (
     <S.TransactionsList>
       <S.TransactionsListHeader>TRANSACTIONS LIST</S.TransactionsListHeader>
       <S.List>
-        {props.transactions.map(transaction => {
+        {transactions.map(transaction => {
           return (
             <Transaction
               key={transaction.id}
@@ -21,7 +21,7 @@ const TransactionsList = props => {
         })}
       </S.List>
       <S.TransactionsCount>
-        Transactions count: {props.transactions.length}
+        Transactions count: {transactions.length}
       </S.TransactionsCount>
     </S.TransactionsList>
   );
@@ -32,3 +32,7 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps)(TransactionsList);
+
+TransactionsList.propTypes = {
+  transactions: PropTypes.array
+};

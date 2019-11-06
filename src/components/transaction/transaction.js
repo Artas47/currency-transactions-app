@@ -2,21 +2,27 @@ import React from "react";
 import * as S from "./transaction.styles";
 import { connect } from "react-redux";
 import { removeTransaction } from "../../actions/index";
+import PropTypes from "prop-types";
 
-const Transaction = props => {
+const Transaction = ({
+  amount,
+  transactionTitle,
+  plnRate,
+  id,
+  removeTransaction
+}) => {
+  const roundedAmount = Math.round(amount * 100) / 100;
   return (
     <S.Transaction>
-      <S.TransactionName>{props.transactionTitle}</S.TransactionName>
+      <S.TransactionName>{transactionTitle}</S.TransactionName>
       <S.TransactionAmountBox>
-        <S.TransactionAmountEuro>
-          {Math.round(props.amount * 100) / 100} (EUR)
-        </S.TransactionAmountEuro>
-        <S.UpArrow style={{ width: "3rem" }}>&darr;</S.UpArrow>
+        <S.TransactionAmountEuro>{roundedAmount} (EUR)</S.TransactionAmountEuro>
+        <S.UpArrow>&darr;</S.UpArrow>
         <S.TransactionAmountPln>
-          {Math.round(props.amount * props.plnRate * 100) / 100} (PLN)
+          {Math.round(amount * plnRate * 100) / 100} (PLN)
         </S.TransactionAmountPln>
       </S.TransactionAmountBox>
-      <S.TransactionDelete onClick={() => props.removeTransaction(props.id)}>
+      <S.TransactionDelete onClick={() => removeTransaction(id)}>
         X
       </S.TransactionDelete>
     </S.Transaction>
@@ -33,3 +39,7 @@ export default connect(
   mapStateToProps,
   { removeTransaction }
 )(Transaction);
+
+Transaction.propTypes = {
+  plnRate: PropTypes.number
+};

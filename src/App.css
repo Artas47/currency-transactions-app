@@ -17,5 +17,6 @@ body {
   font-family: "Quicksand", sans-serif;
   padding: 10rem 10rem;
   background-color: rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }

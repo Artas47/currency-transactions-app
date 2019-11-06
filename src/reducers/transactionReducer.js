@@ -1,8 +1,9 @@
 import _ from "lodash";
+import { ADD_TRANSACTION, REMOVE_TRANSACTION } from "../actions/types";
 
 export default (state = {}, action) => {
   switch (action.type) {
-    case "ADD_TRANSACTION":
+    case ADD_TRANSACTION:
       return {
         ...state,
         [action.payload.id]: {
@@ -10,7 +11,7 @@ export default (state = {}, action) => {
           ...action.payload.formValues
         }
       };
-    case "REMOVE_TRANSACTION":
+    case REMOVE_TRANSACTION:
       return _.omit(state, action.payload);
     default:
       return { ...state };

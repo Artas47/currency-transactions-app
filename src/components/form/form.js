@@ -2,32 +2,30 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 import * as S from "./form.styles";
 import CustomButton from "../custom-button/custom-button";
-import { addTransaction } from "../../actions/index";
-import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-const renderInput = formProps => {
+const renderInput = ({ label, input, meta }) => {
   return (
     <S.FieldBox>
-      <S.Label>{formProps.label}</S.Label>
-      <S.Input {...formProps.input} autoComplete="off" />
-      <S.ErrorText>{renderError(formProps.meta)}</S.ErrorText>
+      <S.Label>{label}</S.Label>
+      <S.Input {...input} autoComplete="off" />
+      <S.ErrorText>{renderError(meta)}</S.ErrorText>
     </S.FieldBox>
   );
 };
-const renderError = props => {
-  if (props.touched && props.error) {
+const renderError = ({ touched, error }) => {
+  if (touched && error) {
     return (
       <div>
-        <div>{props.error}</div>
+        <div>{error}</div>
       </div>
     );
   }
   return;
 };
-const Form = props => {
+const Form = ({ handleSubmit, onSubmit, history }) => {
   return (
-    <form onSubmit={props.handleSubmit(props.onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <Field
         name="transaction"
         component={renderInput}
@@ -42,7 +40,7 @@ const Form = props => {
         <CustomButton primary type="submit">
           Add
         </CustomButton>
-        <CustomButton onClick={() => props.history.push("/")} type="button">
+        <CustomButton onClick={() => history.push("/")} type="button">
           Cancel
         </CustomButton>
       </S.ButtonsContainer>

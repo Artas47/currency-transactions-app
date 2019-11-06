@@ -7,10 +7,10 @@ import { addTransaction } from "../../actions/index";
 import { connect } from "react-redux";
 import uuid from "uuid/v4";
 
-const AddTransactionForm = props => {
+const AddTransactionForm = ({ addTransaction, history }) => {
   const onSubmit = formValues => {
-    props.addTransaction(formValues, uuid());
-    props.history.push("/");
+    addTransaction(formValues, uuid());
+    history.push("/");
   };
   const modalContent = () => {
     return (

@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import { withRouter } from "react-router-dom";
 import * as S from "./modal.styles";
 
-const Modal = props => {
+const Modal = ({ header, modalContent }) => {
   const renderModalContent = () => {
     return (
       <S.Modal>
-        <S.ModalHeader>{props.header}</S.ModalHeader>
-        <S.ModalContent>{props.modalContent}</S.ModalContent>
+        <S.ModalHeader>{header}</S.ModalHeader>
+        <S.ModalContent>{modalContent}</S.ModalContent>
       </S.Modal>
     );
   };
