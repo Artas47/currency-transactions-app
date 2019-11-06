@@ -24,8 +24,9 @@ export const Transaction = styled.div`
 
 export const TransactionName = styled.h2`
   margin-left: 5rem;
-  font-size: 1.8rem;
-  width: 1rem;
+  font-size: 1.5rem;
+  width: 30%;
+  word-wrap: break-word;
   @media (max-width: 1000px) {
     margin-left: 1rem;
   }
