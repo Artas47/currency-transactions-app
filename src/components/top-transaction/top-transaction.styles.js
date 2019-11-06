@@ -5,6 +5,9 @@ export const TopTransaction = styled.div`
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   border: 2px solid darkgrey;
   width: 50rem;
+  @media (max-width: 1500px) {
+    width: 40rem;
+  }
 `;
 
 export const TopTransactionArrow = styled.span`

@@ -4,6 +4,7 @@ export const Predictor = styled.div`
   display: flex;
   align-items: center;
   font-size: 4rem;
+  justify-content: center;
 `;
 
 export const PredictorInput = styled.input`

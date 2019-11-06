@@ -7,6 +7,10 @@ export const TransactionsList = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 650px) {
+    width: 90%;
+  }
 `;
 
 export const TransactionsListHeader = styled.h1`

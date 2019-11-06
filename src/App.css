@@ -12,11 +12,27 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media (max-width: 1500px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 850px) {
+  html {
+    font-size: 40%;
+  }
+}
 
 body {
   font-family: "Quicksand", sans-serif;
-  padding: 10rem 10rem;
+  padding: 10rem 5rem;
   background-color: rgba(0, 0, 0, 0.1);
   width: 100vw;
   height: 100vh;
+}
+@media (max-width: 1500px) {
+  body {
+    padding: 5rem 0rem;
+  }
 }

@@ -57,7 +57,7 @@ const validate = formValues => {
     errors.amount = "You must enter transaction amount";
   }
   if (isNaN(formValues.amount)) {
-    errors.amount = "You must pass a number";
+    errors.amount = "You must pass a valid number";
   }
   return errors;
 };
