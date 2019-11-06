@@ -1,13 +1,13 @@
-import React from "react";
-import * as S from "./add-transaction-button.styles";
-import { Link } from "react-router-dom";
+import React from 'react'
+import {Link} from 'react-router-dom'
+import * as Styles from './add-transaction-button.styles'
 
 const AddTransactionButton = () => {
   return (
-    <Link to="/addTransition">
-      <S.AddTransactionButton>Add transaction</S.AddTransactionButton>
+    <Link to="/addTransaction">
+      <Styles.AddTransactionButton>Add transaction</Styles.AddTransactionButton>
     </Link>
-  );
-};
+  )
+}
 
-export default AddTransactionButton;
+export default AddTransactionButton

@@ -1,45 +1,35 @@
-import React from "react";
-import * as S from "./predictor.styles";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React from 'react'
+import {useSelector, useDispatch} from 'react-redux'
+import * as Styles from './predictor.styles'
 import {
   incrementPlnRate,
-  changePlnRate,
-  decrementPlnRate
-} from "../../actions/index";
-
-const Predictor = ({
-  plnRate,
-  incrementPlnRate,
   decrementPlnRate,
-  changePlnRate
-}) => {
+  changePlnRate,
+} from '../../actions/index'
+import {selectPlnRate} from '../../selectors/selectors'
+
+const Predictor = () => {
+  const dispatch = useDispatch()
+  const plnRate = useSelector(selectPlnRate())
   const onInputChange = e => {
-    changePlnRate(e.target.value);
-  };
-  const roundedPlnRate = Math.round(plnRate * 100) / 100;
+    dispatch(changePlnRate(e.target.value))
+  }
   return (
-    <S.Predictor>
-      1 EURO =<S.UpArrow onClick={() => incrementPlnRate()}> &uarr;</S.UpArrow>
-      <S.PredictorInput
+    <Styles.Predictor>
+      1 EURO =
+      <Styles.UpArrow onClick={() => dispatch(incrementPlnRate())}>
+        &uarr;
+      </Styles.UpArrow>
+      <Styles.PredictorInput
         type="number"
-        value={roundedPlnRate}
+        value={plnRate}
         onChange={e => onInputChange(e)}
       />
-      <S.DownArrow onClick={() => decrementPlnRate()}>&darr;</S.DownArrow>
-    </S.Predictor>
-  );
-};
+      <Styles.DownArrow onClick={() => dispatch(decrementPlnRate())}>
+        &darr;
+      </Styles.DownArrow>
+    </Styles.Predictor>
+  )
+}
 
-const mapStateToProps = state => {
-  return { plnRate: state.currency.plnRate };
-};
-
-export default connect(
-  mapStateToProps,
-  { incrementPlnRate, changePlnRate, decrementPlnRate }
-)(Predictor);
-
-Predictor.propTypes = {
-  plnRate: PropTypes.number
-};
+export default Predictor

@@ -1,22 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { withRouter } from "react-router-dom";
-import * as S from "./modal.styles";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import * as Styles from './modal.styles'
 
-const Modal = ({ header, modalContent }) => {
-  const renderModalContent = () => {
-    return (
-      <S.Modal>
-        <S.ModalHeader>{header}</S.ModalHeader>
-        <S.ModalContent>{modalContent}</S.ModalContent>
-      </S.Modal>
-    );
-  };
-
+const Modal = ({header, modalContent}) => {
   return ReactDOM.createPortal(
-    <S.ModalContainer>{renderModalContent()}</S.ModalContainer>,
-    document.querySelector("#modal")
-  );
-};
+    <Styles.ModalContainer>
+      <Styles.Modal>
+        <Styles.ModalHeader>{header}</Styles.ModalHeader>
+        <Styles.ModalContent>{modalContent}</Styles.ModalContent>
+      </Styles.Modal>
+    </Styles.ModalContainer>,
+    document.querySelector('#modal'),
+  )
+}
 
-export default withRouter(Modal);
+export default Modal

@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro'
 
 export const ModalContainer = styled.div`
   position: fixed;
@@ -10,7 +10,7 @@ export const ModalContainer = styled.div`
   height: 100%;
   transition: all 0.3s ease-out;
   line-height: 2;
-`;
+`
 
 export const Modal = styled.div`
   position: absolute;
@@ -25,13 +25,13 @@ export const Modal = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 export const ModalHeader = styled.h1`
   font-size: 3rem;
-`;
+`
 
 export const ModalContent = styled.div`
   width: 100%;
   font-size: 3rem;
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const TransactionsList = styled.div`
   height: 80vh;
@@ -11,13 +11,13 @@ export const TransactionsList = styled.div`
   @media (max-width: 650px) {
     width: 90%;
   }
-`;
+`
 
 export const TransactionsListHeader = styled.h1`
   text-align: center;
   padding: 4rem 0;
   font-size: 3rem;
-`;
+`
 
 export const List = styled.div`
   height: 100%;
@@ -26,10 +26,10 @@ export const List = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
-`;
+`
 
 export const TransactionsCount = styled.div`
   font-size: 2rem;
   padding: 1rem 0;
   text-align: center;
-`;
+`

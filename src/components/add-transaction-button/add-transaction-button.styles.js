@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const AddTransactionButton = styled.button`
-  width: 50rem;
+  width: 60rem;
   cursor: pointer;
   border: 2px solid darkgrey;
   font-size: 2rem;
@@ -11,4 +11,4 @@ export const AddTransactionButton = styled.button`
   @media (max-width: 1500px) {
     width: 40rem;
   }
-`;
+`

@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Predictor = styled.div`
   display: flex;
   align-items: center;
   font-size: 4rem;
   justify-content: center;
-`;
+`
 
 export const PredictorInput = styled.input`
   text-align: center;
@@ -16,7 +16,7 @@ export const PredictorInput = styled.input`
     -webkit-appearance: none;
     -moz-appearance: textfield;
   }
-`;
+`
 
 export const UpArrow = styled.span`
   font-size: 5rem;
@@ -27,7 +27,7 @@ export const UpArrow = styled.span`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-`;
+`
 
 export const DownArrow = styled.span`
   font-size: 5rem;
@@ -38,4 +38,4 @@ export const DownArrow = styled.span`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-`;
+`

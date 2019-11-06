@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const CustomButton = styled.button`
   width: 40%;
@@ -6,5 +6,5 @@ export const CustomButton = styled.button`
   margin-top: 2rem;
   border: 1px solid darkgrey;
   height: 5rem;
-  background-color: ${props => (props.primary ? "lightgreen" : "lightpink")};
-`;
+  background-color: ${props => (props.primary ? 'lightgreen' : 'lightpink')};
+`

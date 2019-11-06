@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Transaction = styled.div`
   width: 80%;
@@ -20,20 +20,21 @@ export const Transaction = styled.div`
   :last-child {
     margin-bottom: 3rem;
   }
-`;
+`
 
 export const TransactionName = styled.h2`
   margin-left: 5rem;
-  font-size: 1.5rem;
-  width: 30%;
+  font-size: 2rem;
   word-wrap: break-word;
+  width: 40%;
   @media (max-width: 1000px) {
     margin-left: 1rem;
   }
-`;
+  margin-right: auto;
+`
 
-export const TransactionAmountEuro = styled.h2``;
-export const TransactionAmountPln = styled.h1``;
+export const TransactionAmountEuro = styled.h2``
+export const TransactionAmountPln = styled.h1``
 
 export const TransactionDelete = styled.h2`
   margin-right: 5rem;
@@ -41,12 +42,13 @@ export const TransactionDelete = styled.h2`
   @media (max-width: 1000px) {
     margin-right: 1rem;
   }
-`;
+`
 
 export const TransactionAmountBox = styled.div`
   text-align: center;
-`;
+  margin-right: 4rem;
+`
 
 export const UpArrow = styled.span`
   font-size: 4rem;
-`;
+`

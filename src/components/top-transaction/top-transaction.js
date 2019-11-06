@@ -1,53 +1,42 @@
-import React from "react";
-import * as S from "./top-transaction.styles";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React from 'react'
+import {useSelector} from 'react-redux'
+import * as Styles from './top-transaction.styles'
+import {
+  selectPlnRate,
+  selectBiggestTransaction,
+} from '../../selectors/selectors'
 
-const TopTransaction = ({ transactions, plnRate }) => {
-  const arrOfAmounts = transactions.map(transaction => {
-    return transaction.amount;
-  });
-
-  let biggestTransaction = transactions.find(transaction => {
-    return transaction.amount >= Math.max(...arrOfAmounts.map(Number));
-  });
+const TopTransaction = () => {
+  const plnRate = useSelector(selectPlnRate())
+  const biggestTransaction = useSelector(selectBiggestTransaction())
   const topTransaction = biggestTransaction ? (
-    <React.Fragment>
-      <S.TopTransactionTitle>
+    <>
+      <Styles.TopTransactionTitle>
         {biggestTransaction.transaction}
-      </S.TopTransactionTitle>
-      <S.TopTransactionAmountBox>
-        <S.TopTransactionAmountEur>
-          {biggestTransaction.amount} (EUR)
-        </S.TopTransactionAmountEur>
-        <S.TopTransactionArrow>&darr;</S.TopTransactionArrow>
-        <S.TopTransactionAmountPln>
-          {Math.round(biggestTransaction.amount * plnRate * 100) / 100} (PLN)
-        </S.TopTransactionAmountPln>
-      </S.TopTransactionAmountBox>
-    </React.Fragment>
+      </Styles.TopTransactionTitle>
+      <Styles.TopTransactionAmountBox>
+        <Styles.TopTransactionAmountEur>
+          {biggestTransaction.amount}
+          (EUR)
+        </Styles.TopTransactionAmountEur>
+        <Styles.TopTransactionArrow>&darr;</Styles.TopTransactionArrow>
+        <Styles.TopTransactionAmountPln>
+          {Math.round(biggestTransaction.amount * plnRate * 100) / 100}
+          (PLN)
+        </Styles.TopTransactionAmountPln>
+      </Styles.TopTransactionAmountBox>
+    </>
   ) : (
-    <S.TopTransactionEmpty>No transactions</S.TopTransactionEmpty>
-  );
+    <Styles.TopTransactionEmpty>No transactions</Styles.TopTransactionEmpty>
+  )
   return (
-    <S.TopTransaction>
-      <S.TopTransactionHeader>
+    <Styles.TopTransaction>
+      <Styles.TopTransactionHeader>
         Biggest amount transaction
-      </S.TopTransactionHeader>
-      <S.TopTransactionBox>{topTransaction}</S.TopTransactionBox>
-    </S.TopTransaction>
-  );
-};
+      </Styles.TopTransactionHeader>
+      <Styles.TopTransactionBox>{topTransaction}</Styles.TopTransactionBox>
+    </Styles.TopTransaction>
+  )
+}
 
-const mapStateToProps = state => {
-  return {
-    transactions: Object.values(state.transactions),
-    plnRate: state.currency.plnRate
-  };
-};
-
-export default connect(mapStateToProps)(TopTransaction);
-
-TopTransaction.propTypes = {
-  transactions: PropTypes.array
-};
+export default TopTransaction
