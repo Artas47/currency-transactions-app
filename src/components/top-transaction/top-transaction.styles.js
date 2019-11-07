@@ -4,9 +4,16 @@ export const TopTransaction = styled.div`
   background-color: white;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   border: 2px solid darkgrey;
-  width: 60rem;
+  min-height: 25rem;
+  width: 60em;
   @media (max-width: 1500px) {
-    width: 40rem;
+    width: 45rem;
+  }
+  @media (max-width: 900px) {
+    width: 65rem;
+  }
+  @media (max-width: 500px) {
+    width: 50rem;
   }
 `
 
@@ -20,7 +27,9 @@ export const TopTransactionHeader = styled.h2`
   font-size: 2rem;
 `
 
-export const TopTransactionTitle = styled.h4``
+export const TopTransactionTitle = styled.h4`
+  word-wrap: break-word;
+`
 
 export const TopTransactionAmountBox = styled.div`
   display: flex;

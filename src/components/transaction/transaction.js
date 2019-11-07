@@ -33,7 +33,13 @@ const Transaction = ({amount, transactionTitle, id}) => {
 export default Transaction
 
 Transaction.propTypes = {
-  amount: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  transactionTitle: PropTypes.string.isRequired,
+  amount: PropTypes.string,
+  id: PropTypes.string,
+  transactionTitle: PropTypes.string,
+}
+
+Transaction.defaultProps = {
+  amount: '',
+  id: '',
+  transactionTitle: '',
 }

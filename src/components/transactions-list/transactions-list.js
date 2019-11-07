@@ -23,7 +23,7 @@ const TransactionsList = () => {
           )
         })}
       </Styles.List>
-      <Styles.TransactionsCount>
+      <Styles.TransactionsCount data-testid="transactions-length">
         Transactions count:
         {transactions.length}
       </Styles.TransactionsCount>

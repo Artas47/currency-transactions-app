@@ -8,7 +8,7 @@ export const TransactionsList = styled.div`
   flex-direction: column;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 
-  @media (max-width: 650px) {
+  @media (max-width: 900px) {
     width: 90%;
   }
 `

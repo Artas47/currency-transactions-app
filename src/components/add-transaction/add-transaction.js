@@ -15,9 +15,9 @@ const AddTransaction = props => {
   }
   const modalContent = () => {
     return (
-      <Styles.AddTransitionModalContent>
+      <Styles.AddTransactionModalContent>
         <Form onSubmit={onSubmit} />
-      </Styles.AddTransitionModalContent>
+      </Styles.AddTransactionModalContent>
     )
   }
   return <Modal header="Add transaction" modalContent={modalContent()} />
@@ -26,5 +26,9 @@ const AddTransaction = props => {
 export default AddTransaction
 
 AddTransaction.propTypes = {
-  history: PropTypes.shape({push: PropTypes.func.isRequired}).isRequired,
+  history: PropTypes.shape({push: PropTypes.func.isRequired}),
+}
+
+AddTransaction.defaultProps = {
+  history: null,
 }

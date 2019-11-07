@@ -10,7 +10,7 @@ const Modal = ({header, modalContent}) => {
         <Styles.ModalContent>{modalContent}</Styles.ModalContent>
       </Styles.Modal>
     </Styles.ModalContainer>,
-    document.querySelector('#modal'),
+    document.body,
   )
 }
 

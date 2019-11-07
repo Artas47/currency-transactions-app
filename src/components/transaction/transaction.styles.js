@@ -27,6 +27,12 @@ export const TransactionName = styled.h2`
   font-size: 2rem;
   word-wrap: break-word;
   width: 40%;
+  @media (max-width: 1300px) {
+    width: 30%;
+  }
+  @media (max-width: 1200px) {
+    margin-left: 2rem;
+  }
   @media (max-width: 1000px) {
     margin-left: 1rem;
   }
@@ -39,8 +45,11 @@ export const TransactionAmountPln = styled.h1``
 export const TransactionDelete = styled.h2`
   margin-right: 5rem;
   cursor: pointer;
+  @media (max-width: 1200px) {
+    margin-left: 2rem;
+  }
   @media (max-width: 1000px) {
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
 `
 

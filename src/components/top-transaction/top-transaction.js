@@ -16,7 +16,7 @@ const TopTransaction = () => {
       </Styles.TopTransactionTitle>
       <Styles.TopTransactionAmountBox>
         <Styles.TopTransactionAmountEur>
-          {biggestTransaction.amount}
+          {Math.round(biggestTransaction.amount * 100) / 100}
           (EUR)
         </Styles.TopTransactionAmountEur>
         <Styles.TopTransactionArrow>&darr;</Styles.TopTransactionArrow>

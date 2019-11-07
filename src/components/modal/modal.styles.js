@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 export const ModalContainer = styled.div`
   position: fixed;
@@ -26,6 +26,7 @@ export const Modal = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 2px solid darkgrey;
 `
 
 export const ModalHeader = styled.h1`

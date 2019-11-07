@@ -16,7 +16,11 @@ const renderInput = ({label, input, meta}) => {
   return (
     <Styles.FieldBox>
       <Styles.Label>{label}</Styles.Label>
-      <Styles.Input {...input} autoComplete="off" />
+      <Styles.Input
+        data-testid={`${input.name}-input`}
+        {...input}
+        autoComplete="off"
+      />
       <Styles.ErrorText>{renderError(meta)}</Styles.ErrorText>
     </Styles.FieldBox>
   )
@@ -56,7 +60,10 @@ const validate = formValues => {
   }
   // eslint-disable-next-line no-restricted-globals
   if (isNaN(formValues.amount)) {
-    errors.amount = 'You must pass a valid number'
+    errors.amount = 'You must pass a valid amount'
+  }
+  if (formValues.amount <= 0) {
+    errors.amount = 'The amount cannot be less or equal zero'
   }
   return errors
 }
@@ -69,9 +76,14 @@ export default withRouter(
 )
 
 Form.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
-  history: PropTypes.shape({push: PropTypes.func.isRequired}).isRequired,
+  onSubmit: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  history: PropTypes.shape({push: PropTypes.func}),
+}
+Form.defaultProps = {
+  history: null,
+  handleSubmit: () => {},
+  onSubmit: null,
 }
 
 renderInput.propTypes = {

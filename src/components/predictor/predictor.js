@@ -21,6 +21,7 @@ const Predictor = () => {
         &uarr;
       </Styles.UpArrow>
       <Styles.PredictorInput
+        data-testid="plnRate-value"
         type="number"
         value={plnRate}
         onChange={e => onInputChange(e)}
