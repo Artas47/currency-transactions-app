@@ -25,6 +25,7 @@ export const Modal = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `
 
 export const ModalHeader = styled.h1`
@@ -33,5 +34,10 @@ export const ModalHeader = styled.h1`
 
 export const ModalContent = styled.div`
   width: 100%;
+  height: 100%;
   font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `

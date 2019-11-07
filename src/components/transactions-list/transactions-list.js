@@ -2,9 +2,10 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 import * as Styles from './transactions-list.styles'
 import Transaction from '../transaction/transaction'
+import {selectTransactions} from '../../selectors/selectors'
 
 const TransactionsList = () => {
-  const transactions = useSelector(state => Object.values(state.transactions))
+  const transactions = useSelector(selectTransactions)
   return (
     <Styles.TransactionsList>
       <Styles.TransactionsListHeader>

@@ -7,8 +7,8 @@ import {
 } from '../../selectors/selectors'
 
 const TopTransaction = () => {
-  const plnRate = useSelector(selectPlnRate())
-  const biggestTransaction = useSelector(selectBiggestTransaction())
+  const plnRate = useSelector(selectPlnRate)
+  const biggestTransaction = useSelector(selectBiggestTransaction)
   const topTransaction = biggestTransaction ? (
     <>
       <Styles.TopTransactionTitle>

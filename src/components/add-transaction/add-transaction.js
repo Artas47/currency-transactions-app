@@ -7,7 +7,7 @@ import * as Styles from './add-transaction.styles'
 import Form from './form'
 import {addTransaction} from '../../actions/index'
 
-const AddTransactionForm = props => {
+const AddTransaction = props => {
   const dispatch = useDispatch()
   const onSubmit = formValues => {
     dispatch(addTransaction(formValues, uuid()))
@@ -23,8 +23,8 @@ const AddTransactionForm = props => {
   return <Modal header="Add transaction" modalContent={modalContent()} />
 }
 
-export default AddTransactionForm
+export default AddTransaction
 
-AddTransactionForm.propTypes = {
+AddTransaction.propTypes = {
   history: PropTypes.shape({push: PropTypes.func.isRequired}).isRequired,
 }

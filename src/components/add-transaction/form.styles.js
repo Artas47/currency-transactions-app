@@ -23,3 +23,5 @@ export const ButtonsContainer = styled.div`
   justify-content: center;
   padding: 3rem 0;
 `
+
+export const Form = styled.form``

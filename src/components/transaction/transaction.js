@@ -3,10 +3,11 @@ import {useSelector, useDispatch} from 'react-redux'
 import PropTypes from 'prop-types'
 import {removeTransaction} from '../../actions/index'
 import * as Styles from './transaction.styles'
+import {selectPlnRate} from '../../selectors/selectors'
 
 const Transaction = ({amount, transactionTitle, id}) => {
   const dispatch = useDispatch()
-  const plnRate = useSelector(state => state.currency.plnRate)
+  const plnRate = useSelector(selectPlnRate)
   const roundedAmount = Math.round(amount * 100) / 100
   return (
     <Styles.Transaction>

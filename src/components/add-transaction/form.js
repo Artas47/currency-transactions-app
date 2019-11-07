@@ -23,7 +23,7 @@ const renderInput = ({label, input, meta}) => {
 }
 const Form = ({handleSubmit, onSubmit, history}) => {
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <Styles.Form onSubmit={handleSubmit(onSubmit)}>
       <Field
         name="transaction"
         component={renderInput}
@@ -42,7 +42,7 @@ const Form = ({handleSubmit, onSubmit, history}) => {
           Cancel
         </CustomButton>
       </Styles.ButtonsContainer>
-    </form>
+    </Styles.Form>
   )
 }
 
@@ -63,7 +63,7 @@ const validate = formValues => {
 
 export default withRouter(
   reduxForm({
-    form: 'AddTransactionForm',
+    form: 'AddTransaction',
     validate,
   })(Form),
 )

@@ -10,7 +10,7 @@ import {selectPlnRate} from '../../selectors/selectors'
 
 const Predictor = () => {
   const dispatch = useDispatch()
-  const plnRate = useSelector(selectPlnRate())
+  const plnRate = useSelector(selectPlnRate)
   const onInputChange = e => {
     dispatch(changePlnRate(e.target.value))
   }
