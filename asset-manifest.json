@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/currency-transactions-app/static/css/main.3178ae8d.chunk.css",
-    "main.js": "/currency-transactions-app/static/js/main.41a6591f.chunk.js",
-    "main.js.map": "/currency-transactions-app/static/js/main.41a6591f.chunk.js.map",
+    "main.js": "/currency-transactions-app/static/js/main.04ab00b8.chunk.js",
+    "main.js.map": "/currency-transactions-app/static/js/main.04ab00b8.chunk.js.map",
     "runtime-main.js": "/currency-transactions-app/static/js/runtime-main.6e199a35.js",
     "runtime-main.js.map": "/currency-transactions-app/static/js/runtime-main.6e199a35.js.map",
-    "static/js/2.bc767a52.chunk.js": "/currency-transactions-app/static/js/2.bc767a52.chunk.js",
-    "static/js/2.bc767a52.chunk.js.map": "/currency-transactions-app/static/js/2.bc767a52.chunk.js.map",
+    "static/js/2.9a179d19.chunk.js": "/currency-transactions-app/static/js/2.9a179d19.chunk.js",
+    "static/js/2.9a179d19.chunk.js.map": "/currency-transactions-app/static/js/2.9a179d19.chunk.js.map",
     "index.html": "/currency-transactions-app/index.html",
-    "precache-manifest.c620e6950157df9a74098729aa7df7e2.js": "/currency-transactions-app/precache-manifest.c620e6950157df9a74098729aa7df7e2.js",
+    "precache-manifest.12d08ca7d1c718a23462d1b4b0a3f457.js": "/currency-transactions-app/precache-manifest.12d08ca7d1c718a23462d1b4b0a3f457.js",
     "service-worker.js": "/currency-transactions-app/service-worker.js",
     "static/css/main.3178ae8d.chunk.css.map": "/currency-transactions-app/static/css/main.3178ae8d.chunk.css.map",
-    "static/js/2.bc767a52.chunk.js.LICENSE.txt": "/currency-transactions-app/static/js/2.bc767a52.chunk.js.LICENSE.txt"
+    "static/js/2.9a179d19.chunk.js.LICENSE.txt": "/currency-transactions-app/static/js/2.9a179d19.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6e199a35.js",
-    "static/js/2.bc767a52.chunk.js",
+    "static/js/2.9a179d19.chunk.js",
     "static/css/main.3178ae8d.chunk.css",
-    "static/js/main.41a6591f.chunk.js"
+    "static/js/main.04ab00b8.chunk.js"
   ]
 }

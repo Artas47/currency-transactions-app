@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb0a1d6a27ba412c8800c344d1d507a4",
+    "revision": "5e1693a13e2f114f62a28a1e108e9b2d",
     "url": "/currency-transactions-app/index.html"
   },
   {
-    "revision": "28bf7c9db85e08785dfd",
+    "revision": "71a3c9c32f1fec42dcdf",
     "url": "/currency-transactions-app/static/css/main.3178ae8d.chunk.css"
   },
   {
-    "revision": "f57195d486b6954c69fd",
-    "url": "/currency-transactions-app/static/js/2.bc767a52.chunk.js"
+    "revision": "781c0a9a7f6435fcbc84",
+    "url": "/currency-transactions-app/static/js/2.9a179d19.chunk.js"
   },
   {
     "revision": "9c2b079c7c507ea3f72ef59109b49d3d",
-    "url": "/currency-transactions-app/static/js/2.bc767a52.chunk.js.LICENSE.txt"
+    "url": "/currency-transactions-app/static/js/2.9a179d19.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "28bf7c9db85e08785dfd",
-    "url": "/currency-transactions-app/static/js/main.41a6591f.chunk.js"
+    "revision": "71a3c9c32f1fec42dcdf",
+    "url": "/currency-transactions-app/static/js/main.04ab00b8.chunk.js"
   },
   {
     "revision": "e1e7b7c614310c71c32a",
