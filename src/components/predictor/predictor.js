@@ -17,18 +17,18 @@ const Predictor = () => {
   return (
     <Styles.Predictor>
       1 EURO =
-      <Styles.UpArrow onClick={() => dispatch(incrementPlnRate())}>
+      <Styles.Arrow onClick={() => dispatch(incrementPlnRate())}>
         &uarr;
-      </Styles.UpArrow>
+      </Styles.Arrow>
       <Styles.PredictorInput
         data-testid="plnRate-value"
         type="number"
         value={plnRate}
         onChange={e => onInputChange(e)}
       />
-      <Styles.DownArrow onClick={() => dispatch(decrementPlnRate())}>
+      <Styles.Arrow onClick={() => dispatch(decrementPlnRate())}>
         &darr;
-      </Styles.DownArrow>
+      </Styles.Arrow>
     </Styles.Predictor>
   )
 }

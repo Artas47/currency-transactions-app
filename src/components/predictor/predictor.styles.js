@@ -18,18 +18,7 @@ export const PredictorInput = styled.input`
   }
 `
 
-export const UpArrow = styled.span`
-  font-size: 5rem;
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-`
-
-export const DownArrow = styled.span`
+export const Arrow = styled.span`
   font-size: 5rem;
   cursor: pointer;
   -webkit-touch-callout: none;

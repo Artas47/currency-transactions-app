@@ -1,16 +1,14 @@
 import styled from 'styled-components'
 
-export const FieldBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-export const Label = styled.label``
-
 export const Input = styled.input`
   padding: 1rem;
   font-size: 2rem;
+  margin: 0 auto;
+  width: 90%;
+`
+
+export const Label = styled.label`
+  text-align: center;
 `
 
 export const ErrorText = styled.div`
@@ -24,4 +22,8 @@ export const ButtonsContainer = styled.div`
   padding: 3rem 0;
 `
 
-export const Form = styled.form``
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`
