@@ -1,6 +1,6 @@
 {
   "name": "currency-transactions-app",
-  "homepage": "http://artas47.github.io/currency-trasactions-app",
+  "homepage": "http://artas47.github.io/currency-transactions-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

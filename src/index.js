@@ -13,8 +13,12 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware()))
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <Route path="/" component={App} />
-      <Route path="/addTransaction" component={AddTransactionForm} />
+      <Route path="/">
+        <App />
+      </Route>
+      <Route path="/addTransaction">
+        <AddTransactionForm />
+      </Route>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root'),
