@@ -1,4 +1,6 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as Styles from './custom-button.styles'
 
 const CustomButton = props => {
@@ -6,3 +8,7 @@ const CustomButton = props => {
 }
 
 export default CustomButton
+
+CustomButton.propTypes = {
+  children: PropTypes.string.isRequired,
+}

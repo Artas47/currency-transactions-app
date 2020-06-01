@@ -17,7 +17,7 @@ const validate = values => {
   if (!values.amount) {
     errors.amount = 'You must mass transaction amount'
   }
-  if (isNaN(values.amount)) {
+  if (Number.isNaN(Number(values.amount))) {
     errors.amount = 'You must mass a valid amount'
   }
   return errors
@@ -40,26 +40,28 @@ const AddTransactionForm = () => {
       >
         {({handleChange, handleSubmit, values, errors}) => (
           <Styles.Form onSubmit={handleSubmit}>
-            <label>Transaction name</label>
+            <label htmlFor="transaction">Transaction name</label>
             <Styles.Input
               type="text"
               onChange={handleChange}
               value={values.transaction}
               data-testid="transaction-input"
               name="transaction"
+              id="transaction"
             />
             {errors.transaction && (
               <Styles.ErrorText data-testid="transaction-error-text">
                 {errors.transaction}
               </Styles.ErrorText>
             )}
-            <label>Amount</label>
+            <label htmlFor="amount">Amount</label>
             <Styles.Input
               type="text"
               onChange={handleChange}
               value={values.amount}
               data-testid="amount-input"
               name="amount"
+              id="amount"
             />
             {errors.amount && (
               <Styles.ErrorText data-testid="amount-error-text">

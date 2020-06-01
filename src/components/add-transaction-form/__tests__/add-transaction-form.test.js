@@ -6,7 +6,10 @@ import '@testing-library/jest-dom/extend-expect'
 import AddTransactionForm from '../add-transaction-form'
 
 test('should add transaction', async () => {
-  const {getByTestId, store} = renderWithProvider(
+  const {
+    getByTestId,
+    store: {getState},
+  } = renderWithProvider(
     <BrowserRouter>
       <AddTransactionForm />
     </BrowserRouter>,
@@ -19,8 +22,7 @@ test('should add transaction', async () => {
   await waitFor(() => {
     fireEvent.click(submitButton)
   })
-  const transaction = Object.values(store.getState().transactions)[0]
-    .transaction
+  const transaction = Object.values(getState().transactions)[0].transaction
   expect(transaction).toEqual('transaction sample')
 })
 
