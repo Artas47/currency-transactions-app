@@ -3,9 +3,10 @@ import {Formik} from 'formik'
 import {v4 as uuid} from 'uuid'
 import {useDispatch} from 'react-redux'
 import {useHistory} from 'react-router-dom'
-import * as Styles from './form.styles'
 import {addTransaction} from '../../actions/index'
 import CustomButton from '../custom-button/custom-button'
+import Modal from '../modal/modal'
+import * as Styles from './add-transaction-form.styles'
 
 const validate = values => {
   const errors = {}
@@ -22,10 +23,10 @@ const validate = values => {
   return errors
 }
 
-const Form = () => {
+const AddTransactionForm = () => {
   const dispatch = useDispatch()
   const history = useHistory()
-  return (
+  const form = (
     <div>
       <Formik
         validate={validate}
@@ -44,23 +45,29 @@ const Form = () => {
               type="text"
               onChange={handleChange}
               value={values.transaction}
+              data-testid="transaction-input"
               name="transaction"
             />
             {errors.transaction && (
-              <Styles.ErrorText>{errors.transaction}</Styles.ErrorText>
+              <Styles.ErrorText data-testid="transaction-error-text">
+                {errors.transaction}
+              </Styles.ErrorText>
             )}
             <label>Amount</label>
             <Styles.Input
               type="text"
               onChange={handleChange}
               value={values.amount}
+              data-testid="amount-input"
               name="amount"
             />
             {errors.amount && (
-              <Styles.ErrorText>{errors.amount}</Styles.ErrorText>
+              <Styles.ErrorText data-testid="amount-error-text">
+                {errors.amount}
+              </Styles.ErrorText>
             )}
             <Styles.ButtonsContainer>
-              <CustomButton primary type="submit">
+              <CustomButton primary data-testid="submit-button" type="submit">
                 Add
               </CustomButton>
               <CustomButton onClick={() => history.push('/')} type="button">
@@ -72,5 +79,6 @@ const Form = () => {
       </Formik>
     </div>
   )
+  return <Modal header="Add transaction" modalContent={form} />
 }
-export default Form
+export default AddTransactionForm

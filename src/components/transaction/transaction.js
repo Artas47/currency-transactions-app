@@ -11,19 +11,24 @@ const Transaction = ({amount, transactionTitle, id}) => {
   const roundedAmount = Math.round(amount * 100) / 100
   return (
     <Styles.Transaction>
-      <Styles.TransactionName>{transactionTitle}</Styles.TransactionName>
+      <Styles.TransactionName data-testid="transaction-title">
+        {transactionTitle}
+      </Styles.TransactionName>
       <Styles.TransactionAmountBox>
-        <Styles.TransactionAmountEuro>
+        <Styles.TransactionAmountEuro data-testid="transaction-eur-amount">
           {roundedAmount}
           (EUR)
         </Styles.TransactionAmountEuro>
         <Styles.UpArrow>&darr;</Styles.UpArrow>
-        <Styles.TransactionAmountPln>
+        <Styles.TransactionAmountPln data-testid="transaction-pln-amount">
           {Math.round(amount * plnRate * 100) / 100}
           (PLN)
         </Styles.TransactionAmountPln>
       </Styles.TransactionAmountBox>
-      <Styles.TransactionDelete onClick={() => dispatch(removeTransaction(id))}>
+      <Styles.TransactionDelete
+        data-testid="delete-button"
+        onClick={() => dispatch(removeTransaction(id))}
+      >
         X
       </Styles.TransactionDelete>
     </Styles.Transaction>
@@ -33,13 +38,7 @@ const Transaction = ({amount, transactionTitle, id}) => {
 export default Transaction
 
 Transaction.propTypes = {
-  amount: PropTypes.string,
-  id: PropTypes.string,
-  transactionTitle: PropTypes.string,
-}
-
-Transaction.defaultProps = {
-  amount: '',
-  id: '',
-  transactionTitle: '',
+  amount: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  transactionTitle: PropTypes.string.isRequired,
 }

@@ -15,6 +15,7 @@ const TransactionsList = () => {
         {transactions.map(transaction => {
           return (
             <Transaction
+              data-testid="transaction"
               key={transaction.id}
               transactionTitle={transaction.transaction}
               amount={transaction.amount}

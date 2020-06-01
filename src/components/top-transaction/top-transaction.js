@@ -11,11 +11,11 @@ const TopTransaction = () => {
   const biggestTransaction = useSelector(selectBiggestTransaction)
   const topTransaction = biggestTransaction ? (
     <>
-      <Styles.TopTransactionTitle>
+      <Styles.TopTransactionTitle data-testid="top-transaction-title">
         {biggestTransaction.transaction}
       </Styles.TopTransactionTitle>
       <Styles.TopTransactionAmountBox>
-        <Styles.TopTransactionAmountEur>
+        <Styles.TopTransactionAmountEur data-testid="top-transaction-eur-amout">
           {Math.round(biggestTransaction.amount * 100) / 100}
           (EUR)
         </Styles.TopTransactionAmountEur>
@@ -27,7 +27,9 @@ const TopTransaction = () => {
       </Styles.TopTransactionAmountBox>
     </>
   ) : (
-    <Styles.TopTransactionEmpty>No transactions</Styles.TopTransactionEmpty>
+    <Styles.TopTransactionEmpty data-testid="no-transactions-text">
+      No transactions
+    </Styles.TopTransactionEmpty>
   )
   return (
     <Styles.TopTransaction>
