@@ -12,17 +12,20 @@ const App = () => {
   return (
     <Styles.AppContainer>
       <Router>
-        <Route path="/">
+        <Route path="/currency-transactions-app">
           <TransactionsList />
           <Styles.SideBar>
             <Predictor />
-            <Link style={{textDecoration: 'none'}} to="addTransaction">
+            <Link
+              style={{textDecoration: 'none'}}
+              to="/currency-transactions-app/add"
+            >
               <CustomButton add>Add Transaction</CustomButton>
             </Link>
             <TopTransaction />
           </Styles.SideBar>
         </Route>
-        <Route path="/addTransaction">
+        <Route path="/currency-transactions-app/add">
           <AddTransactionForm />
         </Route>
       </Router>

@@ -34,7 +34,7 @@ const AddTransactionForm = () => {
         initialValues={{transaction: '', amount: ''}}
         onSubmit={(values, actions) => {
           dispatch(addTransaction(values, uuid()))
-          history.push('/')
+          history.push('/currency-transactions-app')
           actions.setSubmitting(false)
         }}
       >
@@ -72,7 +72,10 @@ const AddTransactionForm = () => {
               <CustomButton primary data-testid="submit-button" type="submit">
                 Add
               </CustomButton>
-              <CustomButton onClick={() => history.push('/')} type="button">
+              <CustomButton
+                onClick={() => history.push('/currency-transactions-app')}
+                type="button"
+              >
                 Cancel
               </CustomButton>
             </Styles.ButtonsContainer>
